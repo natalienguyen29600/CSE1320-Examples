@@ -15,9 +15,9 @@ int main() {
     a = 12;
     add(&a, arr, 0);
 
-    int *data = arr->data;
-
     for (int i = 0; i < arr->numel; i++) {
+        int *data = (int *)arr->data + i;
+
         printf("a[%d] = %d\n", i, data[i]);
     }
 
